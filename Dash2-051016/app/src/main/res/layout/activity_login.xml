@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#74c4d9"
+    android:textAlignment="center">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Welcome to Tumbleclone!"
+        android:id="@+id/welcome_text"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="70dp"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:typeface="serif"
+        android:textColor="@color/material_blue_grey_800" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="A simple project using the Tumblr api to get and show dashboard posts"
+        android:id="@+id/app_description"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:textAlignment="center" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Click the text below"
+        android:id="@+id/instructions_text"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="25dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="To your dashboard"
+        android:id="@+id/login_button"
+        android:layout_gravity="center_horizontal"
+        android:textStyle="bold"
+        android:textSize="37dp"
+        android:typeface="serif"
+        android:textColor="#315fb0" />
+
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textAppearance="?android:attr/textAppearanceMedium"-->
+        <!--android:text="Log Out"-->
+        <!--android:id="@+id/logout_button"-->
+        <!--android:textStyle="bold"-->
+        <!--android:textSize="25dp"-->
+        <!--android:typeface="serif"-->
+        <!--android:layout_gravity="center_horizontal" />-->
+</LinearLayout>

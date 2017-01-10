@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    tools:context="com.tumblr.dash2.DashboardActivity">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:baselineAligned="false">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1">
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:textAlignment="center"
+                android:text="All"
+                android:textSize="@dimen/tabBar_textSize"
+                android:textStyle="bold"
+                android:textColor="#ffffff"
+                android:typeface="sans"
+                android:background="@color/tab_selected"
+                android:gravity="center_vertical"
+                android:id="@+id/all_posts" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1">
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:textAlignment="center"
+                android:text="Photo"
+                android:textSize="@dimen/tabBar_textSize"
+                android:textStyle="bold"
+                android:textColor="#ffffff"
+                android:typeface="sans"
+                android:background="@color/tab_unselected"
+                android:gravity="center_vertical"
+                android:id="@+id/photo_posts"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1">
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:textAlignment="center"
+                android:text="Video"
+                android:textSize="@dimen/tabBar_textSize"
+                android:textStyle="bold"
+                android:textColor="#ffffff"
+                android:typeface="sans"
+                android:background="@color/tab_unselected"
+                android:gravity="center_vertical"
+                android:id="@+id/video_posts"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1">
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:textAlignment="center"
+                android:text="Text"
+                android:textSize="@dimen/tabBar_textSize"
+                android:textStyle="bold"
+                android:textColor="#ffffff"
+                android:typeface="sans"
+                android:background="@color/tab_unselected"
+                android:gravity="center_vertical"
+                android:id="@+id/text_posts"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1">
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:textAlignment="center"
+                android:text="Quote"
+                android:textSize="@dimen/tabBar_textSize"
+                android:textStyle="bold"
+                android:textColor="#ffffff"
+                android:typeface="sans"
+                android:background="@color/tab_unselected"
+                android:gravity="center_vertical"
+                android:id="@+id/quote_posts"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1">
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:textAlignment="center"
+                android:text="Link"
+                android:textSize="@dimen/tabBar_textSize"
+                android:textStyle="bold"
+                android:textColor="#ffffff"
+                android:typeface="sans"
+                android:background="@color/tab_unselected"
+                android:gravity="center_vertical"
+                android:id="@+id/link_posts"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1">
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:textAlignment="center"
+                android:text="Chat"
+                android:textSize="@dimen/tabBar_textSize"
+                android:textStyle="bold"
+                android:textColor="#ffffff"
+                android:typeface="sans"
+                android:background="@color/tab_unselected"
+                android:gravity="center_vertical"
+                android:id="@+id/chat_posts"/>
+        </LinearLayout>
+
+    </LinearLayout>
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/swipe_refresh"
+        android:background="#74c4d9">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</LinearLayout>

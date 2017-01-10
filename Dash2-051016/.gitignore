@@ -1,0 +1,24 @@
+# Android Generated #
+#####################
+bin/
+gen/
+local.properties
+proguard-project.txt
+build/
+.gradle
+.idea
+*.iml
+out/
+gradle.properties
+
+# OS Generated #
+################
+.DS_STORE
+.DS_Store
+
+# Java Things #
+###############
+.classpath
+.settings/
+
+spoon-output/
