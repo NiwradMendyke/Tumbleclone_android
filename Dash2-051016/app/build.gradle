@@ -30,6 +30,7 @@ dependencies {
     compile 'com.android.support:support-v4:23.1.1'
     compile(group: 'oauth.signpost', name: 'signpost-core', version: '1.2.1.2')
     compile(group: 'oauth.signpost', name: 'signpost-commonshttp4', version: '1.2.1.2')
+    androidTestCompile 'junit:junit:4.12'
 }
 
 // Testing Dependencies

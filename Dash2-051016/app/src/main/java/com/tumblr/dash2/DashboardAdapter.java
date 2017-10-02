@@ -32,6 +32,7 @@ import android.widget.VideoView;
 
 import com.squareup.picasso.Picasso;
 import com.tumblr.jumblr.JumblrClient;
+import com.tumblr.jumblr.types.AnswerPost;
 import com.tumblr.jumblr.types.ChatPost;
 import com.tumblr.jumblr.types.Dialogue;
 import com.tumblr.jumblr.types.LinkPost;
@@ -84,7 +85,7 @@ public class DashboardAdapter extends RecyclerView.Adapter<DashboardAdapter.View
     }
 
     /**
-     * Simple function to create and inflate the ViewHolder object.
+     * Function to create and inflate the ViewHolder object.
      */
     @Override
     public DashboardAdapter.ViewHolder onCreateViewHolder(final ViewGroup parent, int viewType) {
@@ -318,6 +319,23 @@ public class DashboardAdapter extends RecyclerView.Adapter<DashboardAdapter.View
                 singleDialogue.setTextSize(12);
                 content.addView(singleDialogue); // adds a Textview
             }
+        }
+        else if (postType.compareTo("answer") == 0) {
+            AnswerPost answerPost = (AnswerPost) post;
+
+            TextView asker = new TextView(mContext);
+            asker.setTextAppearance(mContext, android.R.style.TextAppearance_Large);
+            asker.setClickable(true);
+            asker.setMovementMethod(LinkMovementMethod.getInstance());
+            // creates the link using the url and the title
+            String text = "<a href='" + answerPost.getAskingUrl() + "'>" + answerPost.getAskingName() + "</a>";
+            asker.setText(Html.fromHtml(text));
+            content.addView(asker); // adds a TextView
+
+            TextView question_answer = new TextView(mContext);
+            question_answer.setText("Q: " + Html.fromHtml(answerPost.getQuestion()) + "\n\nA: " + Html.fromHtml(answerPost.getAnswer()));
+            question_answer.setTypeface(Typeface.create(Typeface.MONOSPACE, Typeface.NORMAL));
+            content.addView(question_answer); // adds a TextView
         }
         else { // If post is not one of the above types
             TextView apologies = new TextView(mContext);

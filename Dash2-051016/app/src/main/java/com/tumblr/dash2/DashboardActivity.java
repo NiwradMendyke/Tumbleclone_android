@@ -42,7 +42,7 @@ public class DashboardActivity extends AppCompatActivity {
 
     private ArrayList<Button> tabBar; // keeps track of the individual tabs in the tab bar
     private int currentPostType; // keeps track of which tab bar is currently selected
-    private String searchValues[] = {"", "photo", "video", "text", "link", "quote", "chat"}; // used for filtering post type
+    private String searchValues[] = {"", "photo", "video", "text", "quote"}; // used for filtering post type
 
     @VisibleForTesting
     /*package*/ RecyclerView mRecyclerView;
@@ -146,9 +146,7 @@ public class DashboardActivity extends AppCompatActivity {
         tabBar.add((Button) findViewById(R.id.photo_posts));
         tabBar.add((Button) findViewById(R.id.video_posts));
         tabBar.add((Button) findViewById(R.id.text_posts));
-        tabBar.add((Button) findViewById(R.id.link_posts));
         tabBar.add((Button) findViewById(R.id.quote_posts));
-        tabBar.add((Button) findViewById(R.id.chat_posts));
 
         class typeChoiceListener implements View.OnClickListener {
             int postTypePicked; // which is the new filtertype picked
@@ -173,7 +171,7 @@ public class DashboardActivity extends AppCompatActivity {
     }
 
     /**
-     * Simple function to change the colors of the old tabitem and the newly selected tabitem
+     * Function to change the colors of the old tabitem and the newly selected tabitem
      *
      * @param oldType the index of the previous tabitem
      * @param newType the index of the new tabitem selected
@@ -187,7 +185,7 @@ public class DashboardActivity extends AppCompatActivity {
     }
 
     /**
-     * Simple function to create the custom asynctask and make a post request
+     * Function to create the custom asynctask and make a post request
      *
      * @param numberOfPosts the number of the posts to retrieve
      * @param position where in dashboardPosts arraylist to add the posts

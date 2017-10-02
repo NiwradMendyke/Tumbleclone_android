@@ -103,42 +103,6 @@
                 android:id="@+id/quote_posts"/>
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:layout_weight="1">
-            <Button
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:textAlignment="center"
-                android:text="Link"
-                android:textSize="@dimen/tabBar_textSize"
-                android:textStyle="bold"
-                android:textColor="#ffffff"
-                android:typeface="sans"
-                android:background="@color/tab_unselected"
-                android:gravity="center_vertical"
-                android:id="@+id/link_posts"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:layout_weight="1">
-            <Button
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:textAlignment="center"
-                android:text="Chat"
-                android:textSize="@dimen/tabBar_textSize"
-                android:textStyle="bold"
-                android:textColor="#ffffff"
-                android:typeface="sans"
-                android:background="@color/tab_unselected"
-                android:gravity="center_vertical"
-                android:id="@+id/chat_posts"/>
-        </LinearLayout>
-
     </LinearLayout>
     <android.support.v4.widget.SwipeRefreshLayout
         android:layout_width="match_parent"
